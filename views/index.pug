@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  ul
+    each message in messages
+      li
+        div= 'Message: ' + message.text
+        div= 'User: ' + message.user
+        div= 'Date added: ' + message.added
+
+  div
+    p
+      a(href="/new") Add a new message
